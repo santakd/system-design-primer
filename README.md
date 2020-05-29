@@ -463,7 +463,7 @@ AP is a good choice if the business needs allow for [eventual consistency](#even
 ### Source(s) and further reading
 
 * [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
-* [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
+* [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)
 * [CAP FAQ](https://github.com/henryr/cap-faq)
 
 ## Consistency patterns
@@ -593,7 +593,7 @@ DNS is hierarchical, with a few authoritative servers at the top level.  Your ro
 
 Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](https://aws.amazon.com/route53/) provide managed DNS services.  Some DNS services can route traffic through various methods:
 
-* [Weighted round robin](http://g33kinfo.com/info/archives/2657)
+* [Weighted round robin](https://www.g33kinfo.com/info/round-robin-vs-weighted-round-robin-lb)
     * Prevent traffic from going to servers under maintenance
     * Balance between varying cluster sizes
     * A/B testing
@@ -682,7 +682,7 @@ Load balancers can route traffic based on various metrics, including:
 * Random
 * Least loaded
 * Session/cookies
-* [Round robin or weighted round robin](http://g33kinfo.com/info/archives/2657)
+* [Round robin or weighted round robin](https://www.g33kinfo.com/info/round-robin-vs-weighted-round-robin-lb)
 * [Layer 4](#layer-4-load-balancing)
 * [Layer 7](#layer-7-load-balancing)
 
@@ -806,7 +806,7 @@ Systems such as [Consul](https://www.consul.io/docs/index.html), [Etcd](https://
 <p align="center">
   <img src="http://i.imgur.com/Xkm5CXz.png"/>
   <br/>
-  <i><a href=https://www.youtube.com/watch?v=w95murBkYmU>Source: Scaling up to your first 10 million users</a></i>
+  <i><a href=https://www.youtube.com/watch?v=kKjm4ehYiMs>Source: Scaling up to your first 10 million users</a></i>
 </p>
 
 ### Relational database management system (RDBMS)
@@ -872,7 +872,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 <p align="center">
   <img src="http://i.imgur.com/U3qV33e.png"/>
   <br/>
-  <i><a href=https://www.youtube.com/watch?v=w95murBkYmU>Source: Scaling up to your first 10 million users</a></i>
+  <i><a href=https://www.youtube.com/watch?v=kKjm4ehYiMs>Source: Scaling up to your first 10 million users</a></i>
 </p>
 
 Federation (or functional partitioning) splits up databases by function.  For example, instead of a single, monolithic database, you could have three databases: **forums**, **users**, and **products**, resulting in less read and write traffic to each database and therefore less replication lag.  Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.
@@ -886,7 +886,7 @@ Federation (or functional partitioning) splits up databases by function.  For ex
 
 ##### Source(s) and further reading: federation
 
-* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=w95murBkYmU)
+* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=kKjm4ehYiMs)
 
 #### Sharding
 
@@ -1122,7 +1122,7 @@ Sample data well-suited for NoSQL:
 
 ##### Source(s) and further reading: SQL or NoSQL
 
-* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=w95murBkYmU)
+* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=kKjm4ehYiMs)
 * [SQL vs NoSQL differences](https://www.sitepoint.com/sql-vs-nosql-differences/)
 
 ## Cache
@@ -1566,6 +1566,7 @@ Security is a broad topic.  Unless you have considerable experience, a security 
 
 ### Source(s) and further reading
 
+* [API security checklist](https://github.com/shieldfy/API-Security-Checklist)
 * [Security guide for developers](https://github.com/FallibleInc/security-guide-for-developers)
 * [OWASP top ten](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet)
 
